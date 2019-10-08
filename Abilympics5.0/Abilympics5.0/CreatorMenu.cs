@@ -35,5 +35,40 @@ namespace Abilympics5._0
             this.ordersTableAdapter.Fill(this.dbDataSet.Orders);
 
         }
+
+        // переходы по tabPage
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage3;
+        }
+
+        // закрытие формы
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        // переход на форму ChangePassCr
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            Form cpc = new ChangePassCr();
+            Hide();
+            DialogResult res = cpc.ShowDialog();
+            if (res != DialogResult.Cancel)
+            {
+                Show();
+            }
+            else Close();
+        }
     }
 }
